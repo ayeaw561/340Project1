@@ -25,14 +25,44 @@ public class Part1{
 
         }
 
-        matrix(array1, array2, n);
+        int[][] array4 = new int[n][n];
 
-        System.out.println(sum(n, array3));
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                array4[i][j] = random.nextInt();
 
+            }
+        }
+
+        scalar(array1, array2, n);
+
+        sum(n, array3);
+
+        matrix(n, array1, array2, array4);
 
     }
 
-    public static void matrix(int[][] a1, int[][] a2, int n){
+    public static void matrix(int n, int[][] a1, int[][] a2, int[][] a3){
+        int i,j,k;
+
+        double timeStart = System.currentTimeMillis();
+
+        for(i=0; i<n; i++)
+            for(j=0; j<n; j++){
+                a3[i][j] = 0;
+                for(k=0; k<n; k++)
+                    a3[i][j] = a3[i][j] + a1[i][k] * a2[k][j];
+                
+        }
+
+        double timeEnd = System.currentTimeMillis();
+        System.out.println("start: " + timeStart + "\nEnd " + timeEnd);
+        double time = (timeEnd - timeStart);
+        System.out.println("The time is: " + time + " ms" + "\nThe time is: " + (time/1000) + " sec");
+
+    }
+
+    public static void scalar(int[][] a1, int[][] a2, int n){
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Multiplied by? ");
@@ -48,8 +78,8 @@ public class Part1{
 
         double timeEnd = System.currentTimeMillis();
         System.out.println("start: " + timeStart + "\nEnd " + timeEnd + "\narray2[2][3]: " + a2[2][3] + "\narray1[2][3]: " + a1[2][3]);
-        double time = (timeEnd - timeStart)/1000;
-        System.out.println("The time is: " + time);
+        double time = (timeEnd - timeStart);
+        System.out.println("The time is: " + time + " ms" + "\nThe time is: " + (time/1000) + " sec");
 
     }
     
@@ -59,15 +89,15 @@ public class Part1{
 
         int p, result = 0;
 
-        for(p= 1; p<= n; p++){
+        for(p= 0; p< n; p++){
 
             result += a1[p];
         }
 
         double timeEnd = System.currentTimeMillis();
         System.out.println("start: " + timeStart + "\nEnd " + timeEnd);
-        double time = (timeEnd - timeStart)/1000;
-        System.out.println("The time is: " + time);
+        double time = (timeEnd - timeStart);
+        System.out.println("The time is: " + time + " ms" + "\nThe time is: " + (time/1000) + " sec");
 
         return result;
     }
