@@ -85,9 +85,9 @@ public class Part1{
     
     public static int sum(int n, int[] a1){
 
-        double timeStart = System.currentTimeMillis();
-
         int p, result = 0;
+
+        double timeStart = System.currentTimeMillis();
 
         for(p= 0; p< n; p++){
 
