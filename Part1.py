@@ -14,7 +14,6 @@ list2d4 = [[0 for i in range(n)] for j in range(n)]
 list5 = [random.random() for i in range(n)]
 
 #Matrix
-timestart = int(time())
 timestartN = time_ns()
 for i in range(n):
     for j in range(n):
@@ -25,39 +24,32 @@ for i in range(n):
 
 timeend = int(time())
 timeendN = time_ns()
-print("start: " + str(timestart) + "\nend: " + str(timeend))
-timedif = timeend - timestart
+print("start: " + str(timestartN) + "\nend: " + str(timeendN))
 timedifN = timeendN - timestartN
-print("The time is: " + str(timedif*1000) + " ms" + "\nThe time is: " + str(timedif) + " sec\n" + str(timedifN) + " nanosec")
+print("The time is: " + str(timedifN/1000000) + " ms" + "\nThe time is: " + str(timedifN/1000000000) + " sec\n" + str(timedifN) + " nanosec")
 
 #Scalar
-timestart = int(time())
 timestartN = time_ns()
 for i in range(n):
     for j in range(n):
         list2d4[i][j] = list2d1[i][j] * x
 
 
-timeend = int(time())
 timeendN = time_ns()
-print("start: " + str(timestart) + "\nend: " + str(timeend))
-timedif = timeend - timestart
+print("start: " + str(timestartN) + "\nend: " + str(timeendN))
 timedifN = timeendN - timestartN
-print("The time is: " + str(timedif*1000) + " ms" + "\nThe time is: " + str(timedif) + " sec\n" + str(timedifN) + " nanosec")
+print("The time is: " + str(timedifN/1000000) + " ms" + "\nThe time is: " + str(timedifN/1000000000) + " sec\n" + str(timedifN) + " nanosec")
 #print("list2d4[2][3]: " + str(list2d4[2][3]) + "\nlist2d1[2][3]: " + str(list2d1[2][3]))
 
 
 #Sum
-timestart = int(time())
 timestartN = time_ns()
 for i in range(n):
     result += list5[i]
 
 
-timeend = int(time())
 timeendN = time_ns()
-print("start: " + str(timestart) + "\nend: " + str(timeend))
-timedif = timeend - timestart
+print("start: " + str(timestartN) + "\nend: " + str(timeendN))
 timedifN = timeendN - timestartN
-print("The time is: " + str(timedif*1000) + " ms" + "\nThe time is: " + str(timedif) + " sec\n" + str(timedifN) + " nanosec")
+print("The time is: " + str(timedifN/1000000) + " ms" + "\nThe time is: " + str(timedifN/1000000000) + " sec\n" + str(timedifN) + " nanosec")
 
