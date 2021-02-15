@@ -1,29 +1,6 @@
 import random
 from time import time, time_ns
-"""
-Matrix
-for(i=0; i<n; i++)
-            for(j=0; j<n; j++){
-                a3[i][j] = 0;
-                for(k=0; k<n; k++)
-                    a3[i][j] = a3[i][j] + a1[i][k] * a2[k][j];
-                
-        }
 
-Scalar
- for(int i=0; i<n; i++){
-            for(int j=0; j<n; j++){
-                a2[i][j] = a1[i][j] * x;
-
-            }
-        }
-
-Sum
-for(p= 0; p< n; p++){
-
-            result += a1[p];
-        }
-"""
 n = input("Enter input size: ")
 n = int(n)
 x = input("Multiplied by? ")
