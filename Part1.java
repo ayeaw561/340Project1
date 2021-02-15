@@ -7,6 +7,8 @@ public class Part1{
 
         System.out.print("What is n? ");
         int n = scan.nextInt();
+        System.out.print("Multiplied by? ");
+        int x = scan.nextInt();
 
         int[][] array1 = new int[n][n];
         int[][] array2 = new int[n][n];
@@ -34,9 +36,9 @@ public class Part1{
             }
         }
 
-        scalar(array1, array2, n);
-
         sum(n, array3);
+
+        scalar(array1, array2, n, x);
 
         matrix(n, array1, array2, array4);
 
@@ -62,11 +64,8 @@ public class Part1{
 
     }
 
-    public static void scalar(int[][] a1, int[][] a2, int n){
+    public static void scalar(int[][] a1, int[][] a2, int n, int x){
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Multiplied by? ");
-        int x = scan.nextInt();
         double timeStart = System.currentTimeMillis();
 
         for(int i=0; i<n; i++){
