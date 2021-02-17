@@ -22,7 +22,6 @@ for i in range(n):
             list2d3[i][j] = list2d3[i][j] + (list2d1[i][k] * list2d2[k][j])
 
 
-timeend = int(time())
 timeendN = time_ns()
 print("start: " + str(timestartN) + "\nend: " + str(timeendN))
 timedifN = timeendN - timestartN
