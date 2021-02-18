@@ -1,5 +1,5 @@
 import java.util.*;
-public class Part1{
+public class Group6{
 
     public static void main(String[] args){
         Random random = new Random();
