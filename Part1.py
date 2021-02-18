@@ -38,7 +38,6 @@ timeendN = time_ns()
 print("start: " + str(timestartN) + "\nend: " + str(timeendN))
 timedifN = timeendN - timestartN
 print("The time is: " + str(timedifN/1000000) + " ms" + "\nThe time is: " + str(timedifN/1000000000) + " sec\n" + str(timedifN) + " nanosec")
-#print("list2d4[2][3]: " + str(list2d4[2][3]) + "\nlist2d1[2][3]: " + str(list2d1[2][3]))
 
 
 #Sum
